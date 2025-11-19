@@ -1,0 +1,220 @@
+/* style.css */
+
+:root {
+  --corprincipal: #cb9f25bb;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f9f9f9;
+  color: #333;
+}
+
+header {
+  background: var(--corprincipal);
+  color: black;
+  text-align: center;
+  padding: 40px 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+header .btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 24px;
+  background: var(--corprincipal);
+  color: black;
+  border: solid 2px black;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+#planos .btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 24px;
+  background: var(--corprincipal);
+  color: black;
+  border: solid 2px black;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bolder;
+}
+
+.logotipo {
+  width: 250px;
+  height: 250px;
+}
+
+section {
+  padding: 40px 3px;
+  text-align: center;
+}
+
+#beneficios img {
+  width: 600px;
+  height: 500px;
+  border-radius: 10px;
+  border: 5px solid #cb9f25f8;
+}
+
+video {
+  width: 400px;
+  height: 400px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 12px rgba(255, 255, 255, 0.589);
+  border: solid 5px var(--corprincipal);
+}
+
+@media all and (max-width: 500px) {
+  #beneficios img {
+    width: 400px;
+    height: 300px;
+    border-radius: 5px;
+  }
+}
+
+#beneficios ul {
+  list-style: none;
+  padding: 0;
+}
+
+#beneficios li {
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+.plano {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 300px;
+}
+
+.plano .btn {
+  display: block;
+  margin-top: 15px;
+  padding: 10px;
+  background: #0077cc;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.planos-img {
+  width: 600px;
+  height: 500px;
+  border-radius: 10px;
+  border: 5px solid #cb9f25;
+}
+
+@media all and (max-width: 500px) {
+  .planos-img {
+    width: 400px;
+    height: 300px;
+    border-radius: 5px;
+  }
+}
+
+/* carossel */
+
+.carousel-container {
+  position: relative;
+  width: 500px;
+  margin: auto;
+  overflow: hidden;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  border: solid 5px var(--corprincipal);
+}
+
+@media all and (max-width: 500px) {
+  .carousel-container {
+    width: 400px;
+  }
+}
+
+.carousel {
+  display: flex;
+  transition: transform 0.4s ease-in-out;
+}
+
+.carousel-item {
+  min-width: 300px;
+  height: 500px;
+  background-color: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2em;
+  border-radius: 5px;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin: 0 10px;
+  border-radius: 5px;
+}
+
+button.prev,
+button.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.158);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+button.prev {
+  left: 0;
+}
+button.next {
+  right: 0;
+}
+
+/* zap */
+
+.zap {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+
+  & img {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .zap img {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+footer {
+  background: var(--corprincipal);
+  color: black;
+  text-align: center;
+  padding: 20px;
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 28px;
+  }
+
+  .plano {
+    width: 90%;
+  }
+}

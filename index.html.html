@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LimaServiço</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <img class="logotipo" src="logotipo.png" alt="" />
+      <h1>LIMATV</h1>
+      <p>Assista seus canais favoritos em qualquer dispositivo!</p>
+      <a href="#planos" class="btn">Ver Planos</a>
+    </header>
+
+    <section class="confira">
+      <h2>Tudo em um só app, confira:</h2>
+      <video src="tudo em um só app.mp4" autoplay loop controls></video>
+    </section>
+
+    <section id="beneficios">
+      <h2>Por que escolher nosso serviço?</h2>
+      <ul>
+        <li>✅ +20.000 filmes e series</li>
+        <li>✅ Suporte de domingo a domingo</li>
+        <li>✅ Atualizações de conteudo semanais</li>
+        <li>✅ Compatível com Smart TV, celular e tablet</li>
+        <li>✅ Aqui voce assiste Futebol, Basquete, vôlei e muito mais.</li>
+      </ul>
+
+      <img src="vantagens.png" alt="" loading="lazy" />
+    </section>
+
+    <section class="carousel-container">
+      <h2>O que falam nosso clientes?</h2>
+      <section class="carousel">
+        <section class="carousel-item">
+          <img src="nota1.jpg" alt="" loading="lazy" />
+        </section>
+        <section class="carousel-item">
+          <img src="nota2.jpg" alt="" loading="lazy" />
+        </section>
+        <section class="carousel-item">
+          <img src="nota3.jpg" alt="" loading="lazy" />
+        </section>
+        <section class="carousel-item">
+          <img src="nota4.jpg" alt="" loading="lazy" />
+        </section>
+        <section class="carousel-item">
+          <img src="nota5.jpg" alt="" loading="lazy" />
+        </section>
+        <section class="carousel-item">
+          <img src="nota6.jpg" alt="" loading="lazy" />
+        </section>
+        <section class="carousel-item">
+          <img src="nota7.jpg" alt="" loading="lazy" />
+        </section>
+      </section>
+      <button class="prev" onclick="moveSlide(-1)">
+        <img src="esquerda.png" width="40px" alt="" />
+      </button>
+      <button class="next" onclick="moveSlide(1)">
+        <img src="direita.png" width="40px" alt="" />
+      </button>
+    </section>
+
+    <script>
+      let currentIndex = 0;
+
+      function moveSlide(direction) {
+        const carousel = document.querySelector(".carousel");
+        const items = document.querySelectorAll(".carousel-item");
+        const totalItems = items.length;
+
+        currentIndex += direction;
+
+        if (currentIndex < 0) currentIndex = totalItems - 1;
+        if (currentIndex >= totalItems) currentIndex = 0;
+
+        const offset = -currentIndex * 300;
+        carousel.style.transform = `translateX(${offset}px)`;
+      }
+    </script>
+
+    <section class="zap">
+      <a href="https://w.app/limatv">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/512px-WhatsApp.svg.png"
+          alt=""
+          loading="lazy"
+        />
+      </a>
+    </section>
+
+    <section id="planos">
+      <img class="planos-img" src="planos.png" alt="" loading="lazy" />
+      <div>
+        <a href="https://w.app/limatv" class="btn">
+          TESTE GRÁTIS AGORA MESMO!</a
+        >
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 LIMATV. Todos os direitos reservados.</p>
+    </footer>
+  </body>
+</html>
